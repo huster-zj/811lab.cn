@@ -1,0 +1,112 @@
+<!--
+ * @Author: Jerry
+ * @Date: 2025-06-15 11:04:40
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2025-09-18 14:46:28
+ * @FilePath: \811lab\index.html
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>811LAB- 项目展示</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 侧边栏导航 -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h1>811LAB</h1>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#home" class="active">首页</a></li>
+                <li><a href="#projects">项目展示</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </ul>
+        </nav>
+
+        <!-- 主内容区域 -->
+        <main class="main-content">
+            <section id="home" class="section">
+                <h1>欢迎来到811LAB</h1>
+                <p>探索创新，追求卓越</p>
+            </section>
+
+            <section id="projects" class="section">
+                <h2>项目展示</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>基于物联网的智能家居</h3>
+                        <p>本项目致力于通过物联网技术实现家庭设备的智能化管理与自动化控制，提升居住体验与安全性。</p>
+                        <ul class="feature-list">
+                            <li>视频监控、家电控制</li>
+                            <li>语音控制（集成大模型接口实现随机答复）</li>
+                            <li>室内恒温控制</li>
+                            <li>人脸识别门禁</li>
+                            <li>安防功能（离家警戒、来访报警驱离）</li>
+                            <li>微信通知（灯光开关、报警等信息推送）</li>
+                            <li>自动化（如通过雨滴传感器，下雨自动关窗）</li>
+                            <li>手机端和Web端本地、远程访问</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">物联网</span>
+                            <span class="tag">智能家居</span>
+                            <span class="tag">自动化</span>
+                        </div>
+                    </div>
+
+                    <a href="draw_food/index.html" style="display:block;text-decoration:none;color:inherit">
+                        <div class="project-card">
+                            <h3>待会吃什么 - 抽签转盘</h3>
+                            <p>一个简洁好玩的随机决定转盘，支持自定义选项、导入导出、打乱与移除等功能。</p>
+                            <ul class="feature-list">
+                                <li>可自定义候选列表（输入/导入）</li>
+                                <li>动画平滑的旋转转盘</li>
+                                <li>选中后结果弹窗提示</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span class="tag">前端</span>
+                                <span class="tag">工具</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="draw_student/standalone.html" style="display:block;text-decoration:none;color:inherit">
+                        <div class="project-card">
+                            <h3>抽签 - 随机学生抽取</h3>
+                            <p>用于课堂或活动中随机抽取学生，支持用户上传包含学生头像的images文件夹。</p>
+                            <ul class="feature-list">
+                                <li>自定义抽签名单（支持导入图片和文本）</li>
+                                <li>动画抽签效果</li>
+                                <li>结果展示</li>
+                            </ul>
+                            <div class="project-tags">
+                                <span class="tag">前端</span>
+                                <span class="tag">抽签</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section id="about" class="section">
+                <h2>关于我们</h2>
+                <p>811LAB致力于前沿技术研究和创新项目开发。</p>
+            </section>
+
+            <section id="contact" class="section">
+                <h2>联系我们</h2>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> 邮箱：m202473806@hust.edu.cn</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 地址：华中科技大学人工智能与自动化学院</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

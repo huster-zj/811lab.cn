@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>待会吃什么 - 抽签转盘</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <h1>待会吃什么</h1>
+
+    <div class="wheel-area">
+      <canvas id="wheelCanvas" width="520" height="520"></canvas>
+      <div class="pointer">▼</div>
+    </div>
+
+    <div class="controls">
+      <div class="row">
+        <input id="newOptionInput" type="text" placeholder="添加一个选项，例如：兰州拉面">
+        <button id="addOptionBtn">添加</button>
+        <button id="spinBtn">开始转动</button>
+        <button id="shuffleBtn">打乱</button>
+      </div>
+      <div class="row">
+        <label><input type="checkbox" id="removeAfterPick"> 选中后从列表移除</label>
+        <label class="range-label">转动时长
+          <input id="spinDuration" type="range" min="3" max="10" step="0.5" value="5">
+          <span id="spinDurationValue">5.0s</span>
+        </label>
+      </div>
+      <div class="row">
+        <input id="importFile" type="file" accept=".txt">
+        <button id="exportBtn">导出TXT</button>
+        <button id="resetBtn">重置为内置列表</button>
+        <button id="clearBtn">清空</button>
+      </div>
+    </div>
+
+    <div id="result" class="result">准备好抽签了吗？</div>
+
+    <div class="list-panel">
+      <h3>当前备选项</h3>
+      <ul id="optionList"></ul>
+    </div>
+
+    <footer>
+      内置列表保存在 options.txt。本地更改会缓存到浏览器。
+    </footer>
+  </div>
+
+  <div id="resultModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-title">抽中啦！</div>
+      <div class="modal-text" id="modalPickedText"></div>
+      <div class="modal-actions">
+        <button id="modalOkBtn">好的</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html> 
