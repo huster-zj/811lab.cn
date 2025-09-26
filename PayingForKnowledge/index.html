@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>知识付费 | 资料展示</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="pk-header">
+    <h1 class="pk-title">资料展示</h1>
+    <div class="pk-controls">
+      <div id="tagContainer" class="pk-tags" aria-label="学科标签"></div>
+      <div class="pk-search">
+        <input id="searchInput" type="search" placeholder="搜索资料名称/简介" aria-label="搜索">
+      </div>
+    </div>
+  </header>
+
+  <main class="pk-main">
+    <section class="pk-list" id="cardList" aria-live="polite"></section>
+  </main>
+
+  <div class="pk-modal" id="previewModal" aria-hidden="true" role="dialog" aria-label="资料预览">
+    <div class="pk-modal__dialog">
+      <button class="pk-modal__close" data-close>×</button>
+      <div class="pk-modal__body">
+        <iframe id="previewFrame" title="PDF 预览" loading="lazy"></iframe>
+        <div class="pk-tip">为保护版权，仅提供不超过 10% 的页面预览</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pk-modal" id="payModal" aria-hidden="true" role="dialog" aria-label="扫码支付">
+    <div class="pk-modal__dialog">
+      <button class="pk-modal__close" data-close>×</button>
+      <div class="pk-modal__body pk-pay">
+        <div class="pk-pay__info">
+          <div class="pk-pay__title">扫码支付以解锁下载</div>
+          <div class="pk-pay__desc">支付完成后点击下方“我已支付”，系统将自动为该资料生成下载链接。</div>
+        </div>
+        <img id="qrImage" class="pk-pay__qr" alt="付款二维码" />
+        <div class="pk-pay__actions">
+          <button id="confirmPaidBtn" class="pk-btn">我已支付</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <template id="cardTemplate">
+    <article class="pk-card">
+      <div class="pk-card__header">
+        <h3 class="pk-card__title"></h3>
+        <span class="pk-chip" data-type></span>
+      </div>
+      <p class="pk-card__desc"></p>
+      <div class="pk-card__tags" data-tags></div>
+      <div class="pk-card__actions">
+        <a class="pk-btn pk-btn--ghost" target="_blank" rel="noopener" data-public-link style="display:none">访问资料</a>
+        <button class="pk-btn" data-preview-btn style="display:none">预览</button>
+        <button class="pk-btn pk-btn--primary" data-pay-btn style="display:none">付费解锁</button>
+        <a class="pk-btn pk-btn--primary" target="_blank" rel="noopener" data-download-btn style="display:none">下载</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
+
+
