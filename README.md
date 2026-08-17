@@ -26,7 +26,7 @@ npx --yes http-server . -p 4173 -c-1
 
 `main` 分支的 HTML、CSS、JavaScript 和本地资源引用校验通过后，GitHub Actions 会自动将站点发布到生产服务器：
 
-- 访问地址：http://120.27.161.157:8080/
+- 访问地址：http://120.27.161.157/
 - 发布目录：`/var/www/811lab/releases/`
 - 当前版本：`/var/www/811lab/current`
 - 保留最近 5 个发布版本；新版本健康检查失败时自动回退
