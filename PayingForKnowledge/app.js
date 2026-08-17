@@ -68,6 +68,22 @@
         publicLink: 'https://example.com/public-network',
       },
       {
+        id: 'p3',
+        type: 'public',
+        title: 'NotebookLM 学习笔记本',
+        desc: 'Google NotebookLM 智能笔记本，帮助整理和分析学习材料。',
+        tags: ['notebooklm'],
+        publicLink: 'https://notebooklm.google.com/notebook/3e7e5d1a-b915-46b6-97dd-0bc9e74566e5',
+      },
+      {
+        id: 'p4',
+        type: 'public',
+        title: 'Roadmap 学习路径指南',
+        desc: 'Roadmap.sh 提供的结构化学习路径，帮助规划技术学习方向。',
+        tags: ['roadmap'],
+        publicLink: 'https://roadmap.sh/r/apl',
+      },
+      {
         id: 'k1',
         type: 'paid',
         title: '电力电子技术笔记（精排）',

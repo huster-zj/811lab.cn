@@ -2,7 +2,7 @@
  * @Author: Jerry
  * @Date: 2025-09-26 13:39:49
  * @LastEditors: Do not edit
- * @LastEditTime: 2025-09-26 14:13:24
+ * @LastEditTime: 2025-09-26 17:21:23
  * @FilePath: \811lab\PayingForKnowledge\PRD.md
 -->
 # 资料展示
