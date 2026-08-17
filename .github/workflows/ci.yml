@@ -1,10 +1,9 @@
-name: Site CI/CD
+name: Site CI
 
 on:
-  push:
+  pull_request:
     branches:
       - main
-  pull_request:
 
 permissions:
   contents: read
@@ -48,85 +47,3 @@ jobs:
 
       - name: Check local links and assets
         run: python .github/scripts/check_local_refs.py
-
-  deploy:
-    name: Deploy to production
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: validate
-    runs-on: ubuntu-latest
-    environment:
-      name: production
-    env:
-      DEPLOY_ROOT: /var/www/811lab
-      SITE_PORT: "80"
-
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v5
-
-      - name: Configure SSH
-        env:
-          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
-          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
-          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
-          DEPLOY_SSH_PORT: ${{ secrets.DEPLOY_SSH_PORT }}
-          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
-        run: |
-          install -m 700 -d ~/.ssh
-          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
-          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
-          chmod 600 ~/.ssh/known_hosts
-          cat > ~/.ssh/config <<EOF
-          Host production
-            HostName $DEPLOY_HOST
-            User $DEPLOY_USER
-            Port $DEPLOY_SSH_PORT
-            IdentityFile ~/.ssh/deploy_key
-            IdentitiesOnly yes
-            BatchMode yes
-          EOF
-          chmod 600 ~/.ssh/config
-
-      - name: Upload release
-        env:
-          RELEASE: ${{ github.sha }}-${{ github.run_number }}
-        run: |
-          ssh production "mkdir -p '$DEPLOY_ROOT/releases/$RELEASE'"
-          rsync -az --delete \
-            --exclude '.git/' \
-            --exclude '.github/' \
-            ./ "production:$DEPLOY_ROOT/releases/$RELEASE/"
-
-      - name: Activate release
-        env:
-          RELEASE: ${{ github.sha }}-${{ github.run_number }}
-        run: |
-          ssh production \
-            "DEPLOY_ROOT='$DEPLOY_ROOT' RELEASE='$RELEASE' SITE_PORT='$SITE_PORT' bash -s" <<'REMOTE'
-          set -euo pipefail
-          cd "$DEPLOY_ROOT"
-          previous="$(readlink current || true)"
-          ln -sfn "releases/$RELEASE" current.next
-          mv -Tf current.next current
-          if ! curl --fail --silent --show-error "http://127.0.0.1:$SITE_PORT/" >/dev/null; then
-            if [ -n "$previous" ]; then
-              ln -sfn "$previous" current.next
-              mv -Tf current.next current
-            fi
-            exit 1
-          fi
-          find "$DEPLOY_ROOT/releases" -mindepth 1 -maxdepth 1 -type d -printf '%T@ %p\n' \
-            | sort -nr \
-            | tail -n +6 \
-            | cut -d' ' -f2- \
-            | xargs -r rm -rf
-          REMOTE
-
-      - name: Verify public endpoint
-        env:
-          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
-        run: |
-          curl --fail --silent --show-error \
-            --retry 5 --retry-delay 2 \
-            "http://$DEPLOY_HOST:$SITE_PORT/" >/dev/null

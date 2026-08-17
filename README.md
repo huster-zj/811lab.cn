@@ -24,14 +24,17 @@ npx --yes http-server . -p 4173 -c-1
 
 ## 部署
 
-`main` 分支的 HTML、CSS、JavaScript 和本地资源引用校验通过后，GitHub Actions 会自动将站点发布到生产服务器：
+GitHub Actions 将持续集成和部署拆分为两个独立工作流：
+
+- CI 在指向 `main` 的 PR 上校验 HTML、CSS、JavaScript 和本地资源引用。
+- CD 只在 PR 实际合并到 `main` 后发布；关闭未合并的 PR 或直接推送不会触发部署。
 
 - 访问地址：http://120.27.161.157/
 - 发布目录：`/var/www/811lab/releases/`
 - 当前版本：`/var/www/811lab/current`
 - 保留最近 5 个发布版本；新版本健康检查失败时自动回退
 
-CD 工作流依赖仓库中的 `DEPLOY_HOST`、`DEPLOY_USER`、`DEPLOY_SSH_PORT`、`DEPLOY_SSH_KEY` 和 `DEPLOY_KNOWN_HOSTS` secrets。
+CD 工作流依赖 `production` 环境中的 `DEPLOY_HOST`、`DEPLOY_USER`、`DEPLOY_SSH_PORT`、`DEPLOY_SSH_KEY` 和 `DEPLOY_KNOWN_HOSTS` secrets。
 
 ## 内容来源
 
