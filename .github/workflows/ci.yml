@@ -1,0 +1,50 @@
+name: Site CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate static site
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate HTML
+        shell: bash
+        run: |
+          mapfile -d '' files < <(git ls-files -z '*.html')
+          npx --yes htmlhint@1 --config .github/htmlhintrc "${files[@]}"
+
+      - name: Validate CSS
+        shell: bash
+        run: |
+          mapfile -d '' files < <(git ls-files -z '*.css')
+          npx --yes stylelint@16 --config .github/stylelint.json "${files[@]}"
+
+      - name: Check JavaScript syntax
+        shell: bash
+        run: |
+          while IFS= read -r file; do
+            node --check "$file"
+          done < <(git ls-files '*.js')
+
+      - name: Check local links and assets
+        run: python .github/scripts/check_local_refs.py
