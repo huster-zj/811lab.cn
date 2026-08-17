@@ -7,7 +7,7 @@
     <title>811lab.cn · 工作台日志</title>
     <link rel="preconnect" href="https://miaoda.feishu.cn">
     <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <a class="skip-link" href="#main-content">跳到主要内容</a>
@@ -23,7 +23,7 @@
                 <a href="#studio">工作室</a>
                 <a href="#library">书架与路线</a>
             </nav>
-            <a class="quiet-tool" href="#tools"><span class="tool-dot" aria-hidden="true"></span>抽签工具</a>
+            <a class="quiet-tool" href="roll/"><span class="tool-dot" aria-hidden="true"></span>课堂抽签</a>
         </div>
     </header>
 
@@ -215,6 +215,82 @@
                     </a>
                 </div>
             </div>
+
+            <div class="book-catalog-wrap">
+                <div class="catalog-header">
+                    <div class="catalog-title">
+                        <p class="kicker">COMPLETE SHELF / 47</p>
+                        <h3>完整书架与计划阅读范围</h3>
+                        <p>以下书目来自工作室现有清单。阅读状态尚未逐本登记，因此这里只展示真实的书名、作者、类别和主题，不预设“已读”或“待读”。</p>
+                    </div>
+                    <label class="catalog-search">
+                        <span>检索书架</span>
+                        <input type="search" placeholder="搜索书名、作者或关键词" data-book-search autocomplete="off">
+                    </label>
+                </div>
+                <div class="catalog-filter-row" aria-label="书籍分类筛选">
+                    <button class="catalog-filter is-active" type="button" data-book-filter="all">全部 47</button>
+                    <button class="catalog-filter" type="button" data-book-filter="人工智能与数据">人工智能与数据 7</button>
+                    <button class="catalog-filter" type="button" data-book-filter="计算机与工程">计算机与工程 13</button>
+                    <button class="catalog-filter" type="button" data-book-filter="系统工程与航天">系统工程与航天 5</button>
+                    <button class="catalog-filter" type="button" data-book-filter="数学与优化">数学与优化 3</button>
+                    <button class="catalog-filter" type="button" data-book-filter="商业与科技">商业与科技 8</button>
+                    <button class="catalog-filter" type="button" data-book-filter="财税与法律">财税与法律 3</button>
+                    <button class="catalog-filter" type="button" data-book-filter="人文与成长">人文与成长 5</button>
+                    <button class="catalog-filter" type="button" data-book-filter="小说">小说 3</button>
+                </div>
+                <div class="catalog-status">当前显示 <strong data-book-visible-count>47</strong> 本</div>
+                <ol class="book-catalog" data-book-catalog>
+                    <li class="book-entry" data-book-category="人工智能与数据" data-book-search="人工智能芯片设计 尹首一 涂锋斌 朱丹 魏少军 AI芯片 架构设计 数据流"><span class="book-entry-index">01</span><div><h4>《人工智能芯片设计》</h4><p>尹首一、涂锋斌、朱丹、魏少军</p></div><span class="book-entry-meta">AI芯片 · 架构设计 · 数据流</span></li>
+                    <li class="book-entry" data-book-category="人工智能与数据" data-book-search="昇腾AI处理器架构与编程 梁晓峣 AI处理器 昇腾 编程"><span class="book-entry-index">02</span><div><h4>《昇腾AI处理器架构与编程》</h4><p>梁晓峣</p></div><span class="book-entry-meta">AI处理器 · 昇腾 · 编程</span></li>
+                    <li class="book-entry" data-book-category="人工智能与数据" data-book-search="统计学习方法 第2版 李航 机器学习 统计"><span class="book-entry-index">03</span><div><h4>《统计学习方法》（第2版）</h4><p>李航</p></div><span class="book-entry-meta">机器学习 · 统计</span></li>
+                    <li class="book-entry" data-book-category="人工智能与数据" data-book-search="机器学习 周志华"><span class="book-entry-index">04</span><div><h4>《机器学习》</h4><p>周志华</p></div><span class="book-entry-meta">机器学习</span></li>
+                    <li class="book-entry" data-book-category="人工智能与数据" data-book-search="神经网络与深度学习 邱锡鹏 深度学习 人工智能"><span class="book-entry-index">05</span><div><h4>《神经网络与深度学习》</h4><p>邱锡鹏</p></div><span class="book-entry-meta">深度学习 · 人工智能</span></li>
+                    <li class="book-entry" data-book-category="人工智能与数据" data-book-search="神经网络与深度学习 蓝色点缀版 吴岸城 神经网络 深度学习"><span class="book-entry-index">06</span><div><h4>《神经网络与深度学习》（蓝色点缀版）</h4><p>吴岸城</p></div><span class="book-entry-meta">神经网络 · 深度学习</span></li>
+                    <li class="book-entry" data-book-category="人工智能与数据" data-book-search="智能计算系统 陈云霁 李玲 李威 郭崎 杜子东 人工智能 计算机体系结构"><span class="book-entry-index">07</span><div><h4>《智能计算系统》</h4><p>陈云霁、李玲、李威、郭崎、杜子东</p></div><span class="book-entry-meta">智能计算 · 计算机体系结构</span></li>
+                    <li class="book-entry" data-book-category="计算机与工程" data-book-search="电子元器件从零基础到实战 图说帮 电子技术 元器件 实战"><span class="book-entry-index">08</span><div><h4>《电子元器件从零基础到实战》</h4><p>图说帮</p></div><span class="book-entry-meta">电子技术 · 元器件 · 实战</span></li>
+                    <li class="book-entry" data-book-category="计算机与工程" data-book-search="SoC FPGA嵌入式设计与开发教程 梅雪松 宋士权 陈云龙 FPGA SoC 嵌入式系统"><span class="book-entry-index">09</span><div><h4>《SoC FPGA嵌入式设计与开发教程》</h4><p>梅雪松、宋士权、陈云龙</p></div><span class="book-entry-meta">FPGA · SoC · 嵌入式系统</span></li>
+                    <li class="book-entry" data-book-category="计算机与工程" data-book-search="现代传感器手册 原理 设计及应用 雅各布 弗雷登 Jacob Fraden 传感器"><span class="book-entry-index">10</span><div><h4>《现代传感器手册：原理、设计及应用》</h4><p>雅各布·弗雷登（Jacob Fraden）</p></div><span class="book-entry-meta">传感器 · 原理 · 设计</span></li>
+                    <li class="book-entry" data-book-category="计算机与工程" data-book-search="单片机原理及应用 张毅刚 单片机 嵌入式系统"><span class="book-entry-index">11</span><div><h4>《单片机原理及应用》</h4><p>张毅刚</p></div><span class="book-entry-meta">单片机 · 嵌入式系统</span></li>
+                    <li class="book-entry" data-book-category="计算机与工程" data-book-search="Xilinx Zynq-7000嵌入式系统设计与实现 何宾 张艳辉 FPGA Zynq"><span class="book-entry-index">12</span><div><h4>《Xilinx Zynq-7000嵌入式系统设计与实现》</h4><p>何宾、张艳辉</p></div><span class="book-entry-meta">FPGA · Zynq · 嵌入式系统</span></li>
+                    <li class="book-entry" data-book-category="计算机与工程" data-book-search="计算机组成原理 唐朔飞 计算机系统 硬件"><span class="book-entry-index">13</span><div><h4>《计算机组成原理》</h4><p>唐朔飞</p></div><span class="book-entry-meta">计算机系统 · 硬件</span></li>
+                    <li class="book-entry" data-book-category="计算机与工程" data-book-search="软件工程 齐治昌 谭庆平 宁洪 软件开发 项目管理"><span class="book-entry-index">14</span><div><h4>《软件工程》</h4><p>齐治昌、谭庆平、宁洪</p></div><span class="book-entry-meta">软件开发 · 项目管理</span></li>
+                    <li class="book-entry" data-book-category="计算机与工程" data-book-search="计算机算法基础 宋晏 杨国兴 朱红 算法 数据结构 C语言"><span class="book-entry-index">15</span><div><h4>《计算机算法基础》</h4><p>宋晏、杨国兴、朱红</p></div><span class="book-entry-meta">算法 · 数据结构 · C语言</span></li>
+                    <li class="book-entry" data-book-category="计算机与工程" data-book-search="计算机组成原理 微课版 谭志虎 计算机系统 硬件"><span class="book-entry-index">16</span><div><h4>《计算机组成原理》（微课版）</h4><p>谭志虎</p></div><span class="book-entry-meta">计算机系统 · 硬件 · 微课</span></li>
+                    <li class="book-entry" data-book-category="计算机与工程" data-book-search="深入浅出MFC 第2版 侯俊杰 Windows开发 MFC C++"><span class="book-entry-index">17</span><div><h4>《深入浅出MFC》（第2版）</h4><p>侯俊杰</p></div><span class="book-entry-meta">Windows开发 · MFC · C++</span></li>
+                    <li class="book-entry" data-book-category="计算机与工程" data-book-search="机器人学 建模 控制与视觉 熊有伦 李文龙 陈文斌 杨华 丁烨 赵欢 计算机视觉"><span class="book-entry-index">18</span><div><h4>《机器人学：建模、控制与视觉》</h4><p>熊有伦、李文龙、陈文斌、杨华、丁烨、赵欢</p></div><span class="book-entry-meta">机器人 · 建模 · 控制 · 视觉</span></li>
+                    <li class="book-entry" data-book-category="计算机与工程" data-book-search="计算之魂 吴军 计算机 科技人文"><span class="book-entry-index">19</span><div><h4>《计算之魂》</h4><p>吴军</p></div><span class="book-entry-meta">计算机 · 科技人文</span></li>
+                    <li class="book-entry" data-book-category="计算机与工程" data-book-search="Scrum精髓 敏捷转型指南 肯尼斯 鲁宾 Kenneth Rubin 敏捷开发 项目管理"><span class="book-entry-index">20</span><div><h4>《Scrum精髓：敏捷转型指南》</h4><p>肯尼斯·S·鲁宾（Kenneth S. Rubin）</p></div><span class="book-entry-meta">敏捷开发 · 项目管理 · Scrum</span></li>
+                    <li class="book-entry" data-book-category="系统工程与航天" data-book-search="空间站运营任务规划 罗亚中 张进 朱阅訸 任务规划 航天 空间站"><span class="book-entry-index">21</span><div><h4>《空间站运营任务规划》</h4><p>罗亚中、张进、朱阅訸</p></div><span class="book-entry-meta">任务规划 · 航天 · 空间站</span></li>
+                    <li class="book-entry" data-book-category="系统工程与航天" data-book-search="基于模型的系统工程 MBSE 实践入门 MagicGrid建模方法 张芹 孔庆山 王小宁"><span class="book-entry-index">22</span><div><h4>《基于模型的系统工程（MBSE）实践入门：MagicGrid建模方法》</h4><p>张芹、孔庆山、王小宁</p></div><span class="book-entry-meta">MBSE · 系统工程 · MagicGrid</span></li>
+                    <li class="book-entry" data-book-category="系统工程与航天" data-book-search="SysML精粹 Lenny Delligatti 系统建模"><span class="book-entry-index">23</span><div><h4>《SysML精粹》</h4><p>Lenny Delligatti</p></div><span class="book-entry-meta">SysML · 系统建模</span></li>
+                    <li class="book-entry" data-book-category="系统工程与航天" data-book-search="应用SysML实现AI辅助的MBSE Doug Rosenberg Tim Weilkiens Brian Moberley 人工智能"><span class="book-entry-index">24</span><div><h4>《应用SysML实现AI辅助的MBSE》</h4><p>Doug Rosenberg、Tim Weilkiens、Brian Moberley</p></div><span class="book-entry-meta">SysML · MBSE · 人工智能</span></li>
+                    <li class="book-entry" data-book-category="系统工程与航天" data-book-search="精华透视 SysML v2 刘玉生 袁文强 赵观辉 曹悦 胡杨 系统工程"><span class="book-entry-index">25</span><div><h4>《精华透视：SysML v2》</h4><p>刘玉生（主编）、袁文强、赵观辉、曹悦、胡杨</p></div><span class="book-entry-meta">SysML v2 · 系统工程</span></li>
+                    <li class="book-entry" data-book-category="数学与优化" data-book-search="数学之美 第三版 吴军 数学 人工智能 计算机"><span class="book-entry-index">26</span><div><h4>《数学之美》（第三版）</h4><p>吴军</p></div><span class="book-entry-meta">数学 · 人工智能 · 计算机</span></li>
+                    <li class="book-entry" data-book-category="数学与优化" data-book-search="运筹优化常用模型 算法与案例实战 刘兴禄 熊望祺 臧永森 段宏达 曾文佳 陈伟坚"><span class="book-entry-index">27</span><div><h4>《运筹优化常用模型、算法与案例实战》</h4><p>刘兴禄、熊望祺、臧永森、段宏达、曾文佳、陈伟坚</p></div><span class="book-entry-meta">运筹学 · 优化算法 · 案例</span></li>
+                    <li class="book-entry" data-book-category="数学与优化" data-book-search="矩阵分析与应用 第2版 张贤达 数学 矩阵分析 工程计算"><span class="book-entry-index">28</span><div><h4>《矩阵分析与应用》（第2版）</h4><p>张贤达</p></div><span class="book-entry-meta">数学 · 矩阵分析 · 工程计算</span></li>
+                    <li class="book-entry" data-book-category="商业与科技" data-book-search="浪潮之巅 上册 吴军 科技史 产业 公司"><span class="book-entry-index">29</span><div><h4>《浪潮之巅》（上册）</h4><p>吴军</p></div><span class="book-entry-meta">科技史 · 产业 · 公司</span></li>
+                    <li class="book-entry" data-book-category="商业与科技" data-book-search="浪潮之巅 下册 吴军 科技史 产业 公司"><span class="book-entry-index">30</span><div><h4>《浪潮之巅》（下册）</h4><p>吴军</p></div><span class="book-entry-meta">科技史 · 产业 · 公司</span></li>
+                    <li class="book-entry" data-book-category="商业与科技" data-book-search="增长黑客 肖恩 埃利斯 Sean Ellis 摩根 布朗 Morgan Brown 增长 营销 创业"><span class="book-entry-index">31</span><div><h4>《增长黑客》</h4><p>肖恩·埃利斯（Sean Ellis）、摩根·布朗（Morgan Brown）</p></div><span class="book-entry-meta">增长 · 营销 · 创业</span></li>
+                    <li class="book-entry" data-book-category="商业与科技" data-book-search="创业复盘 华科系校友逆风险创业口述案例 方伟 创业 复盘 华科"><span class="book-entry-index">32</span><div><h4>《创业复盘：华科系校友逆风险创业口述案例》</h4><p>方伟（主编）</p></div><span class="book-entry-meta">创业 · 复盘 · 华科</span></li>
+                    <li class="book-entry" data-book-category="商业与科技" data-book-search="因为独特 李翔 商业 创业 IP"><span class="book-entry-index">33</span><div><h4>《因为独特》</h4><p>李翔</p></div><span class="book-entry-meta">商业 · 创业 · IP</span></li>
+                    <li class="book-entry" data-book-category="商业与科技" data-book-search="为什么伟大不能被计划 肯尼斯 斯坦利 Kenneth Stanley 乔尔 雷曼 Joel Lehman 创新 创业 增长"><span class="book-entry-index">34</span><div><h4>《为什么伟大不能被计划》</h4><p>肯尼斯·斯坦利（Kenneth Stanley）、乔尔·雷曼（Joel Lehman）</p></div><span class="book-entry-meta">创新 · 创业 · 增长</span></li>
+                    <li class="book-entry" data-book-category="商业与科技" data-book-search="英伟达之道 The NVIDIA Way 金泰 Tae Kim 科技公司 企业史 AI产业"><span class="book-entry-index">35</span><div><h4>《英伟达之道（The NVIDIA Way）》</h4><p>金泰（Tae Kim）</p></div><span class="book-entry-meta">科技公司 · 企业史 · AI产业</span></li>
+                    <li class="book-entry" data-book-category="商业与科技" data-book-search="芯片战争 克里斯 米勒 Chris Miller 半导体 产业史 地缘政治"><span class="book-entry-index">36</span><div><h4>《芯片战争》</h4><p>克里斯·米勒（Chris Miller）</p></div><span class="book-entry-meta">半导体 · 产业史 · 地缘政治</span></li>
+                    <li class="book-entry" data-book-category="财税与法律" data-book-search="创业者必知必会的财务知识 杨东礼 创业 财务"><span class="book-entry-index">37</span><div><h4>《创业者必知必会的财务知识》</h4><p>杨东礼</p></div><span class="book-entry-meta">创业 · 财务</span></li>
+                    <li class="book-entry" data-book-category="财税与法律" data-book-search="一本书读懂税收常识 赵伟 税务 财务"><span class="book-entry-index">38</span><div><h4>《一本书读懂税收常识》</h4><p>赵伟</p></div><span class="book-entry-meta">税务 · 财务</span></li>
+                    <li class="book-entry" data-book-category="财税与法律" data-book-search="法律的悖论 罗翔 法律 社会"><span class="book-entry-index">39</span><div><h4>《法律的悖论》</h4><p>罗翔</p></div><span class="book-entry-meta">法律 · 社会</span></li>
+                    <li class="book-entry" data-book-category="人文与成长" data-book-search="坚毅 GRIT 安杰拉 达克沃思 Angela Duckworth 个人成长 毅力"><span class="book-entry-index">40</span><div><h4>《坚毅（GRIT）》</h4><p>安杰拉·达克沃思（Angela Duckworth）</p></div><span class="book-entry-meta">个人成长 · 毅力</span></li>
+                    <li class="book-entry" data-book-category="人文与成长" data-book-search="今日简史 尤瓦尔 赫拉利 Yuval Noah Harari 历史 社会 科技"><span class="book-entry-index">41</span><div><h4>《今日简史》</h4><p>尤瓦尔·赫拉利（Yuval Noah Harari）</p></div><span class="book-entry-meta">历史 · 社会 · 科技</span></li>
+                    <li class="book-entry" data-book-category="人文与成长" data-book-search="未来简史 尤瓦尔 赫拉利 Yuval Noah Harari 历史 科技 社会"><span class="book-entry-index">42</span><div><h4>《未来简史》</h4><p>尤瓦尔·赫拉利（Yuval Noah Harari）</p></div><span class="book-entry-meta">历史 · 科技 · 社会</span></li>
+                    <li class="book-entry" data-book-category="人文与成长" data-book-search="深度工作 Deep Work 卡尔 纽波特 Cal Newport 专注 效率 工作方法"><span class="book-entry-index">43</span><div><h4>《深度工作（Deep Work）》</h4><p>卡尔·纽波特（Cal Newport）</p></div><span class="book-entry-meta">专注 · 效率 · 工作方法</span></li>
+                    <li class="book-entry" data-book-category="人文与成长" data-book-search="当下的力量 埃克哈特 托利 Eckhart Tolle 心灵成长 自我认知"><span class="book-entry-index">44</span><div><h4>《当下的力量》</h4><p>埃克哈特·托利（Eckhart Tolle）</p></div><span class="book-entry-meta">心灵成长 · 自我认知</span></li>
+                    <li class="book-entry" data-book-category="小说" data-book-search="围城 钱钟书 现代文学 婚姻 社会"><span class="book-entry-index">45</span><div><h4>《围城》</h4><p>钱钟书</p></div><span class="book-entry-meta">现代文学 · 婚姻 · 社会</span></li>
+                    <li class="book-entry" data-book-category="小说" data-book-search="霍乱时期的爱情 加西亚 马尔克斯 Gabriel García Márquez 爱情 拉美文学"><span class="book-entry-index">46</span><div><h4>《霍乱时期的爱情》</h4><p>加西亚·马尔克斯（Gabriel García Márquez）</p></div><span class="book-entry-meta">爱情 · 拉美文学</span></li>
+                    <li class="book-entry" data-book-category="小说" data-book-search="圣女的救济 东野圭吾 推理 悬疑"><span class="book-entry-index">47</span><div><h4>《圣女的救济》</h4><p>东野圭吾</p></div><span class="book-entry-meta">推理 · 悬疑</span></li>
+                </ol>
+                <p class="catalog-empty" data-book-empty hidden>没有匹配的书籍，试试更短的关键词或切换分类。</p>
+            </div>
         </section>
 
         <section class="section tools-section" id="tools" data-section>
@@ -225,9 +301,8 @@
                 </div>
                 <p>导师点名时，从这里进入。</p>
             </div>
-            <div class="tool-links">
-                <a href="draw_student/standalone.html" class="tool-link"><span class="tool-link-mark">01</span><span><strong>课堂抽签</strong><small>随机学生抽取</small></span><span>↗</span></a>
-                <a href="draw_food/index.html" class="tool-link"><span class="tool-link-mark">02</span><span><strong>今天吃什么</strong><small>随机决定转盘</small></span><span>↗</span></a>
+            <div class="tool-links tool-links-single">
+                <a href="roll/" class="tool-link"><span class="tool-link-mark">/roll/</span><span><strong>课堂抽签</strong><small>随机学生抽取，课堂点名使用</small></span><span>↗</span></a>
             </div>
         </section>
     </main>
@@ -240,6 +315,6 @@
         <div class="footer-bottom"><span>© 2026 811LAB</span><span>本地重构版本 / waiting to go online</span></div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
