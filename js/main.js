@@ -1,53 +1,60 @@
-// 平滑滚动
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth'
-            });
-            
-            // 更新活动链接
-            document.querySelectorAll('.sidebar-menu a').forEach(link => {
-                link.classList.remove('active');
-            });
-            this.classList.add('active');
-        }
-    });
-});
+(function () {
+    'use strict';
 
-// 导航栏滚动效果
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-        header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-    } else {
-        header.style.backgroundColor = '#fff';
+    var header = document.querySelector('[data-header]');
+    var navLinks = Array.from(document.querySelectorAll('.main-nav a'));
+    var sections = Array.from(document.querySelectorAll('[data-section]'));
+
+    function updateHeader() {
+        if (header) header.classList.toggle('is-scrolled', window.scrollY > 12);
     }
-});
 
-// 监听滚动事件，更新活动链接
-window.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('.section');
-    const navLinks = document.querySelectorAll('.sidebar-menu a');
-    
-    let currentSection = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= (sectionTop - 200)) {
-            currentSection = section.getAttribute('id');
-        }
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
+
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                navLinks.forEach(function (link) {
+                    link.classList.toggle('is-active', link.getAttribute('href') === '#' + entry.target.id);
+                });
+            });
+        }, { rootMargin: '-28% 0px -58% 0px', threshold: 0 });
+        sections.forEach(function (section) { observer.observe(section); });
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            var targetId = link.getAttribute('href');
+            var target = document.querySelector(targetId);
+            if (!target) return;
+            event.preventDefault();
+            var offset = (header ? header.offsetHeight : 0) + 18;
+            window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+            history.replaceState(null, '', targetId);
+        });
     });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSection}`) {
-            link.classList.add('active');
-        }
+
+    var filterButtons = Array.from(document.querySelectorAll('[data-filter]'));
+    var cards = Array.from(document.querySelectorAll('.journal-card'));
+    var emptyState = document.querySelector('[data-empty-state]');
+
+    filterButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            var filter = button.dataset.filter;
+            filterButtons.forEach(function (item) {
+                var active = item === button;
+                item.classList.toggle('is-active', active);
+                item.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+            var visibleCount = 0;
+            cards.forEach(function (card) {
+                var visible = filter === 'all' || card.dataset.category === filter;
+                card.classList.toggle('is-hidden', !visible);
+                if (visible) visibleCount += 1;
+            });
+            if (emptyState) emptyState.hidden = visibleCount > 0;
+        });
     });
-}); 
+})();

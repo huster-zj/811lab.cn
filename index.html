@@ -1,112 +1,245 @@
-<!--
- * @Author: Jerry
- * @Date: 2025-06-15 11:04:40
- * @LastEditors: Do not edit
- * @LastEditTime: 2025-09-18 14:46:28
- * @FilePath: \811lab\index.html
--->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>811LAB- 项目展示</title>
+    <meta name="description" content="811lab.cn 是一份个人成长记录，也是一间持续整理中的工作室档案。">
+    <title>811lab.cn · 工作台日志</title>
+    <link rel="preconnect" href="https://miaoda.feishu.cn">
+    <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <!-- 侧边栏导航 -->
-        <nav class="sidebar">
-            <div class="sidebar-header">
-                <h1>811LAB</h1>
-            </div>
-            <ul class="sidebar-menu">
-                <li><a href="#home" class="active">首页</a></li>
-                <li><a href="#projects">项目展示</a></li>
-                <li><a href="#about">关于我们</a></li>
-                <li><a href="#contact">联系方式</a></li>
-            </ul>
-        </nav>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
 
-        <!-- 主内容区域 -->
-        <main class="main-content">
-            <section id="home" class="section">
-                <h1>欢迎来到811LAB</h1>
-                <p>探索创新，追求卓越</p>
-            </section>
+    <header class="site-header" data-header>
+        <div class="header-inner">
+            <a class="brand" href="#top" aria-label="回到 811lab.cn 首页">
+                <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="brand-text"><strong>811lab.cn</strong><small>个人工作室 / working notes</small></span>
+            </a>
+            <nav class="main-nav" aria-label="主要导航">
+                <a href="#journal">记录</a>
+                <a href="#studio">工作室</a>
+                <a href="#library">书架与路线</a>
+            </nav>
+            <a class="quiet-tool" href="#tools"><span class="tool-dot" aria-hidden="true"></span>抽签工具</a>
+        </div>
+    </header>
 
-            <section id="projects" class="section">
-                <h2>项目展示</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h3>基于物联网的智能家居</h3>
-                        <p>本项目致力于通过物联网技术实现家庭设备的智能化管理与自动化控制，提升居住体验与安全性。</p>
-                        <ul class="feature-list">
-                            <li>视频监控、家电控制</li>
-                            <li>语音控制（集成大模型接口实现随机答复）</li>
-                            <li>室内恒温控制</li>
-                            <li>人脸识别门禁</li>
-                            <li>安防功能（离家警戒、来访报警驱离）</li>
-                            <li>微信通知（灯光开关、报警等信息推送）</li>
-                            <li>自动化（如通过雨滴传感器，下雨自动关窗）</li>
-                            <li>手机端和Web端本地、远程访问</li>
-                        </ul>
-                        <div class="project-tags">
-                            <span class="tag">物联网</span>
-                            <span class="tag">智能家居</span>
-                            <span class="tag">自动化</span>
-                        </div>
+    <main id="main-content">
+        <section class="hero" id="top" data-section>
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="eyebrow-line"></span>个人成长记录 / 811LAB</p>
+                    <h1>把正在做的事，<em>留在可回看的地方。</em></h1>
+                    <p class="hero-intro">这里是我的工作台日志：记录项目如何开始、知识如何被验证，也记录一间小型工作室慢慢长出自己的秩序。</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#journal">浏览最近记录 <span aria-hidden="true">↘</span></a>
+                        <a class="button button-quiet" href="#studio">查看工作室档案 <span aria-hidden="true">→</span></a>
                     </div>
+                    <div class="hero-meta">
+                        <span><b class="status-pulse"></b> 本地版本</span>
+                        <span>最后整理 / 2026.08</span>
+                        <span>内容源 / Obsidian 工作室</span>
+                    </div>
+                </div>
 
-                    <a href="draw_food/index.html" style="display:block;text-decoration:none;color:inherit">
-                        <div class="project-card">
-                            <h3>待会吃什么 - 抽签转盘</h3>
-                            <p>一个简洁好玩的随机决定转盘，支持自定义选项、导入导出、打乱与移除等功能。</p>
-                            <ul class="feature-list">
-                                <li>可自定义候选列表（输入/导入）</li>
-                                <li>动画平滑的旋转转盘</li>
-                                <li>选中后结果弹窗提示</li>
-                            </ul>
-                            <div class="project-tags">
-                                <span class="tag">前端</span>
-                                <span class="tag">工具</span>
-                            </div>
+                <div class="hero-visual" aria-label="工作台记录的抽象视觉">
+                    <div class="visual-topline"><span>WORKBENCH / 01</span><span>FIELD NOTES</span></div>
+                    <div class="workbench-grid">
+                        <div class="grid-cross cross-a"></div>
+                        <div class="grid-cross cross-b"></div>
+                        <div class="trace trace-a"></div>
+                        <div class="trace trace-b"></div>
+                        <div class="trace trace-c"></div>
+                        <div class="board board-main">
+                            <span class="board-label">SIGNAL / 02</span>
+                            <span class="board-line line-one"></span>
+                            <span class="board-line line-two"></span>
+                            <span class="board-line line-three"></span>
+                            <span class="board-chip chip-one"></span>
+                            <span class="board-chip chip-two"></span>
+                            <span class="board-chip chip-three"></span>
                         </div>
+                        <div class="note note-main"><span>keep<br>testing</span><i></i></div>
+                        <div class="note note-side"><span>03</span><small>read / run / reflect</small></div>
+                        <div class="visual-stamp">LAB<br><strong>811</strong></div>
+                    </div>
+                    <div class="visual-footline"><span>OBSERVE → BUILD → SHARE</span><span>01—03</span></div>
+                </div>
+            </div>
+            <div class="hero-rule" aria-hidden="true"><span>SCROLL TO EXPLORE</span><span></span></div>
+        </section>
+
+        <section class="section journal-section" id="journal" data-section>
+            <div class="section-heading">
+                <div>
+                    <p class="kicker">01 / JOURNAL</p>
+                    <h2>最近在想什么</h2>
+                </div>
+                <p class="section-note">先留下问题，再追踪答案。这里会逐渐长出真正的文章。</p>
+            </div>
+
+            <div class="filter-row" role="tablist" aria-label="记录分类筛选">
+                <button class="filter-button is-active" type="button" data-filter="all" role="tab" aria-selected="true">全部记录</button>
+                <button class="filter-button" type="button" data-filter="frontier" role="tab" aria-selected="false">前沿探索</button>
+                <button class="filter-button" type="button" data-filter="open-source" role="tab" aria-selected="false">开源项目</button>
+                <button class="filter-button" type="button" data-filter="reflection" role="tab" aria-selected="false">工作复盘</button>
+            </div>
+
+            <div class="journal-grid">
+                <article class="journal-card journal-card-featured" data-category="frontier" id="frontier-card">
+                    <div class="card-topline"><span class="card-index">A / 01</span><span class="card-date">方向整理中</span></div>
+                    <div class="card-body">
+                        <span class="card-label">前沿探索</span>
+                        <h3>从“读到”走向“验证”：给研究信息安排下一步</h3>
+                        <p>把论文、专利、标准与技术报告放进同一条工作流，留下判断、证据和下一次实验，而不是只收藏链接。</p>
+                        <a href="#studio" class="text-link">查看研究框架 <span>↗</span></a>
+                    </div>
+                    <div class="card-mark" aria-hidden="true"></div>
+                </article>
+
+                <article class="journal-card" data-category="open-source">
+                    <div class="card-topline"><span class="card-index">B / 02</span><span class="card-date">165 个条目</span></div>
+                    <div class="card-body">
+                        <span class="card-label card-label-teal">开源项目</span>
+                        <h3>把路线图变成可执行的项目索引</h3>
+                        <p>从软件、硬件和 AI 工具开始，先完成一次浏览或运行，再决定是否值得深入研究。</p>
+                        <a href="#library" class="text-link">打开项目索引 <span>↗</span></a>
+                    </div>
+                </article>
+
+                <article class="journal-card" data-category="reflection">
+                    <div class="card-topline"><span class="card-index">C / 03</span><span class="card-date">持续补全</span></div>
+                    <div class="card-body">
+                        <span class="card-label card-label-gold">工作复盘</span>
+                        <h3>一间工作室先要有“可找到的东西”</h3>
+                        <p>设备、书籍、项目和资料先建立轻量目录，等真的形成连续记录，再拆成更细的专题。</p>
+                        <a href="#studio" class="text-link">看看档案结构 <span>↗</span></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="empty-note" data-empty-state hidden>这个分类还在积累中，先从工作台上的下一条记录开始。</div>
+        </section>
+
+        <section class="section studio-section" id="studio" data-section>
+            <div class="section-heading">
+                <div>
+                    <p class="kicker">02 / STUDIO INDEX</p>
+                    <h2>工作室档案</h2>
+                </div>
+                <p class="section-note">不是“展示柜”，更像一张随时会被改写的工作台目录。</p>
+            </div>
+
+            <div class="studio-layout">
+                <div class="archive-list">
+                    <a class="archive-item" href="#library">
+                        <span class="archive-number">01</span>
+                        <span class="archive-content"><strong>开源项目研究</strong><small>源码阅读、运行验证、局部复刻与个人心得</small></span>
+                        <span class="archive-arrow">↗</span>
                     </a>
-                    <a href="draw_student/standalone.html" style="display:block;text-decoration:none;color:inherit">
-                        <div class="project-card">
-                            <h3>抽签 - 随机学生抽取</h3>
-                            <p>用于课堂或活动中随机抽取学生，支持用户上传包含学生头像的images文件夹。</p>
-                            <ul class="feature-list">
-                                <li>自定义抽签名单（支持导入图片和文本）</li>
-                                <li>动画抽签效果</li>
-                                <li>结果展示</li>
-                            </ul>
-                            <div class="project-tags">
-                                <span class="tag">前端</span>
-                                <span class="tag">抽签</span>
-                            </div>
-                        </div>
+                    <a class="archive-item" href="#frontier-card">
+                        <span class="archive-number">02</span>
+                        <span class="archive-content"><strong>前沿探索</strong><small>论文、专利、标准与技术方向的长期判断</small></span>
+                        <span class="archive-arrow">↗</span>
+                    </a>
+                    <a class="archive-item" href="#library">
+                        <span class="archive-number">03</span>
+                        <span class="archive-content"><strong>书籍管理</strong><small>按主题整理正在读、待读和值得回看的书</small></span>
+                        <span class="archive-arrow">↗</span>
+                    </a>
+                    <a class="archive-item archive-item-muted" href="#studio-status">
+                        <span class="archive-number">04</span>
+                        <span class="archive-content"><strong>硬件设备清单</strong><small>设备到手后登记；详细库存正在补全</small></span>
+                        <span class="archive-arrow">—</span>
+                    </a>
+                    <a class="archive-item archive-item-muted" href="#studio-status">
+                        <span class="archive-number">05</span>
+                        <span class="archive-content"><strong>项目记录</strong><small>等项目状态和下一步明确后逐条建立</small></span>
+                        <span class="archive-arrow">—</span>
                     </a>
                 </div>
-            </section>
 
-            <section id="about" class="section">
-                <h2>关于我们</h2>
-                <p>811LAB致力于前沿技术研究和创新项目开发。</p>
-            </section>
+                <aside class="status-panel" id="studio-status">
+                    <div class="panel-heading"><span>工作台状态</span><span class="panel-live"><b></b> LIVE INDEX</span></div>
+                    <div class="status-main"><span class="status-big">05</span><span class="status-copy">条记录线<br><small>正在形成个人知识系统</small></span></div>
+                    <div class="status-bar" aria-label="5 类档案中已有 3 类内容"><span style="width: 60%"></span></div>
+                    <div class="status-row"><span>索引骨架</span><strong>已建立</strong></div>
+                    <div class="status-row"><span>硬件明细</span><strong class="is-pending">待补充</strong></div>
+                    <div class="status-row"><span>项目进度</span><strong class="is-pending">待补充</strong></div>
+                    <p class="panel-footnote">状态只来自工作室目录中的真实记录，不用占位数据替代。</p>
+                </aside>
+            </div>
+        </section>
 
-            <section id="contact" class="section">
-                <h2>联系我们</h2>
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> 邮箱：m202473806@hust.edu.cn</p>
-                    <p><i class="fas fa-map-marker-alt"></i> 地址：华中科技大学人工智能与自动化学院</p>
+        <section class="section library-section" id="library" data-section>
+            <div class="section-heading">
+                <div>
+                    <p class="kicker">03 / SHELF & ROUTES</p>
+                    <h2>书架与研究路线</h2>
                 </div>
-            </section>
-        </main>
-    </div>
+                <p class="section-note">阅读不是收藏数量，而是下一次动手前的准备。</p>
+            </div>
+
+            <div class="library-layout">
+                <div class="book-shelf">
+                    <div class="shelf-header"><span>当前书架 / 47 本</span><span>AI · 工程 · 系统 · 成长</span></div>
+                    <div class="book-stack" aria-label="书架上的书籍">
+                        <div class="book book-coral"><span>人工智能<br>芯片设计</span><small>尹首一等</small></div>
+                        <div class="book book-ink"><span>统计学习<br>方法</span><small>李航</small></div>
+                        <div class="book book-teal"><span>机器人学</span><small>建模 / 控制 / 视觉</small></div>
+                        <div class="book book-gold"><span>深度工作</span><small>Deep Work</small></div>
+                        <div class="book book-blue"><span>SysML<br>精粹</span><small>L. Delligatti</small></div>
+                    </div>
+                    <div class="shelf-line"></div>
+                    <p class="shelf-caption">书籍清单已经建立，后续会在真正读完或验证之后补充笔记。</p>
+                </div>
+
+                <div class="route-list">
+                    <a class="route-item" href="https://roadmap.sh/r/rdm-xqyvk" target="_blank" rel="noreferrer">
+                        <span class="route-icon route-icon-orange">/</span>
+                        <span><strong>软件路线图</strong><small>开发参考、Web、AI、工具与学习资源</small></span>
+                        <span class="route-count">165</span>
+                    </a>
+                    <a class="route-item" href="https://roadmap.sh/r/copy-lsiu7" target="_blank" rel="noreferrer">
+                        <span class="route-icon route-icon-teal">+</span>
+                        <span><strong>硬件路线图</strong><small>开发板、电子、PCB、机械与开源硬件</small></span>
+                        <span class="route-count">138</span>
+                    </a>
+                    <a class="route-item" href="https://roadmap.sh/teams/684bf30aa60942b85d67a488/roadmaps/artificial-intelligence--automation-engineering" target="_blank" rel="noreferrer">
+                        <span class="route-icon route-icon-gold">∿</span>
+                        <span><strong>AI 与自动化工程</strong><small>研究框架、信息工作流和实践资源</small></span>
+                        <span class="route-count">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section tools-section" id="tools" data-section>
+            <div class="tools-heading">
+                <div>
+                    <p class="kicker">04 / SMALL TOOLS</p>
+                    <h2>工作台边角的小工具</h2>
+                </div>
+                <p>导师点名时，从这里进入。</p>
+            </div>
+            <div class="tool-links">
+                <a href="draw_student/standalone.html" class="tool-link"><span class="tool-link-mark">01</span><span><strong>课堂抽签</strong><small>随机学生抽取</small></span><span>↗</span></a>
+                <a href="draw_food/index.html" class="tool-link"><span class="tool-link-mark">02</span><span><strong>今天吃什么</strong><small>随机决定转盘</small></span><span>↗</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div class="footer-inner">
+            <div><strong>811lab.cn</strong><span>把生活里的实验，写成以后找得到的记录。</span></div>
+            <div class="footer-meta"><span>HUST · AI & Automation</span><a href="mailto:m202473806@hust.edu.cn">m202473806@hust.edu.cn</a></div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 811LAB</span><span>本地重构版本 / waiting to go online</span></div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
-</html> 
+</html>
