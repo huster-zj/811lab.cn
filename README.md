@@ -1,5 +1,7 @@
 # 811lab.cn
 
+[![Site CI](https://github.com/huster-zj/811lab.cn/actions/workflows/ci.yml/badge.svg)](https://github.com/huster-zj/811lab.cn/actions/workflows/ci.yml)
+
 811lab.cn 是个人成长博客与工作室档案，记录正在进行的学习、项目、研究路线和书架。
 
 ## 目录结构
