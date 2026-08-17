@@ -1,3 +1,5 @@
+notebooklm
+roadmap
 自动控制原理
 电机与拖动基础
 电力电子技术
