@@ -21,6 +21,7 @@
             <nav class="main-nav" aria-label="主要导航">
                 <a href="#journal">记录</a>
                 <a href="#studio">工作室</a>
+                <a href="#hardware">设备</a>
                 <a href="#library">书架与路线</a>
             </nav>
         </div>
@@ -149,10 +150,10 @@
                         <span class="archive-content"><strong>书籍管理</strong><small>按主题整理正在读、待读和值得回看的书</small></span>
                         <span class="archive-arrow">↗</span>
                     </a>
-                    <a class="archive-item archive-item-muted" href="#studio-status">
+                    <a class="archive-item" href="#hardware">
                         <span class="archive-number">04</span>
-                        <span class="archive-content"><strong>硬件设备清单</strong><small>设备到手后登记；详细库存正在补全</small></span>
-                        <span class="archive-arrow">—</span>
+                        <span class="archive-content"><strong>硬件设备清单</strong><small>6 个分类、39 项代表性设备与研发平台</small></span>
+                        <span class="archive-arrow">↗</span>
                     </a>
                     <a class="archive-item archive-item-muted" href="#studio-status">
                         <span class="archive-number">05</span>
@@ -164,19 +165,133 @@
                 <aside class="status-panel" id="studio-status">
                     <div class="panel-heading"><span>工作台状态</span><span class="panel-live"><b></b> LIVE INDEX</span></div>
                     <div class="status-main"><span class="status-big">05</span><span class="status-copy">条记录线<br><small>正在形成个人知识系统</small></span></div>
-                    <div class="status-bar" aria-label="5 类档案中已有 3 类内容"><span style="width: 60%"></span></div>
+                    <div class="status-bar" aria-label="5 类档案中已有 4 类内容"><span style="width: 80%"></span></div>
                     <div class="status-row"><span>索引骨架</span><strong>已建立</strong></div>
-                    <div class="status-row"><span>硬件明细</span><strong class="is-pending">待补充</strong></div>
+                    <div class="status-row"><span>硬件明细</span><strong>已更新</strong></div>
                     <div class="status-row"><span>项目进度</span><strong class="is-pending">待补充</strong></div>
                     <p class="panel-footnote">状态只来自工作室目录中的真实记录，不用占位数据替代。</p>
                 </aside>
             </div>
         </section>
 
+        <section class="section hardware-section" id="hardware" data-section>
+            <div class="section-heading">
+                <div>
+                    <p class="kicker">03 / HARDWARE INDEX</p>
+                    <h2>硬件设备清单</h2>
+                </div>
+                <p class="section-note">面向访客的工作室硬件简介，完整库存与当前状态以飞书多维表格为准。</p>
+            </div>
+
+            <div class="hardware-overview">
+                <div class="hardware-stat"><strong>39</strong><span>项代表性设备</span></div>
+                <div class="hardware-stat"><strong>06</strong><span>个设备分类</span></div>
+                <div class="hardware-stat"><strong>01</strong><span>份持续更新的完整清单</span></div>
+                <a class="hardware-source" href="https://my.feishu.cn/base/K867bLnd0a6XL6s6AdWc1d4nnwh?table=tblyCnKaKiyGgyCd&amp;view=vewQFHjddP" target="_blank" rel="noreferrer">打开飞书使用清单 <span aria-hidden="true">↗</span></a>
+            </div>
+
+            <div class="hardware-toolbar">
+                <div class="hardware-filters" role="tablist" aria-label="硬件分类筛选">
+                    <button class="hardware-filter is-active" type="button" data-hardware-filter="all" role="tab" aria-selected="true">全部 39</button>
+                    <button class="hardware-filter" type="button" data-hardware-filter="3D 打印" role="tab" aria-selected="false">3D 打印 2</button>
+                    <button class="hardware-filter" type="button" data-hardware-filter="计算机与存储" role="tab" aria-selected="false">计算机与存储 5</button>
+                    <button class="hardware-filter" type="button" data-hardware-filter="嵌入式开发板" role="tab" aria-selected="false">嵌入式开发板 16</button>
+                    <button class="hardware-filter" type="button" data-hardware-filter="机器人与运动控制" role="tab" aria-selected="false">机器人与运动控制 5</button>
+                    <button class="hardware-filter" type="button" data-hardware-filter="电子仪器" role="tab" aria-selected="false">电子仪器 5</button>
+                    <button class="hardware-filter" type="button" data-hardware-filter="自媒体与影音设备" role="tab" aria-selected="false">自媒体与影音设备 6</button>
+                </div>
+                <label class="hardware-search">
+                    <span>检索设备</span>
+                    <input type="search" placeholder="搜索设备、型号或用途" data-hardware-search autocomplete="off">
+                </label>
+            </div>
+
+            <div class="hardware-status">当前显示 <strong data-hardware-visible-count>39</strong> 项</div>
+
+            <div class="hardware-grid" data-hardware-grid>
+                <section class="hardware-category" data-hardware-category="3D 打印">
+                    <div class="hardware-category-head"><span class="hardware-category-index">01</span><h3>3D 打印</h3><span>02 项</span></div>
+                    <ul class="hardware-list">
+                        <li class="hardware-item" data-hardware-search="3D 打印机 拓竹 A1 制作结构件 外壳 治具 快速原型"><h4>3D 打印机</h4><p class="hardware-spec">拓竹 A1</p><p>制作结构件、外壳、治具和快速原型</p></li>
+                        <li class="hardware-item" data-hardware-search="3D 耗材 PLA PETG Silk ABS TPU 彩虹色 哑光 夜光 FDM 后处理"><h4>3D 耗材</h4><p class="hardware-spec">PLA、PETG、Silk、ABS、TPU；彩虹色、哑光、夜光等</p><p>覆盖常见 FDM 打印材料和后处理用品</p></li>
+                    </ul>
+                </section>
+
+                <section class="hardware-category" data-hardware-category="计算机与存储">
+                    <div class="hardware-category-head"><span class="hardware-category-index">02</span><h3>计算机与存储</h3><span>05 项</span></div>
+                    <ul class="hardware-list">
+                        <li class="hardware-item" data-hardware-search="NAS 服务器 QNAP TS-216 Seagate 酷狼 4TB 文件存储 备份 局域网共享"><h4>NAS 服务器</h4><p class="hardware-spec">QNAP TS-216；Seagate 酷狼 4TB</p><p>文件存储、备份和局域网共享</p></li>
+                        <li class="hardware-item" data-hardware-search="固态硬盘 GM7000 高速 系统盘 项目盘"><h4>固态硬盘</h4><p class="hardware-spec">GM7000</p><p>高速系统盘和项目盘</p></li>
+                        <li class="hardware-item" data-hardware-search="移动硬盘 1000GB 项目资料 移动备份 交付"><h4>移动硬盘</h4><p class="hardware-spec">1000GB 等</p><p>项目资料移动备份和交付</p></li>
+                        <li class="hardware-item" data-hardware-search="台式主机 CO-44 开发 建模 切片 资料处理"><h4>台式主机</h4><p class="hardware-spec">CO-44 台式主机</p><p>开发、建模、切片和资料处理</p></li>
+                        <li class="hardware-item" data-hardware-search="显示器 A22 Redmi 21.45 S24 HP 24 Q32N2S 32 E16 15.6 便携屏 多屏 开发 演示"><h4>显示器</h4><p class="hardware-spec">A22（Redmi 21.45 英寸）、S24（HP 24 英寸）、Q32N2S（32 英寸）、E16（15.6 英寸便携屏）</p><p>多屏开发、资料查看和项目演示</p></li>
+                    </ul>
+                </section>
+
+                <section class="hardware-category" data-hardware-category="嵌入式开发板">
+                    <div class="hardware-category-head"><span class="hardware-category-index">03</span><h3>嵌入式开发板</h3><span>16 项</span></div>
+                    <ul class="hardware-list">
+                        <li class="hardware-item" data-hardware-search="ESP32 开发板 Type-C Wi-Fi 蓝牙 CH340 物联网 无线通信 入门"><h4>ESP32 开发板</h4><p class="hardware-spec">ESP32 Type-C；Wi-Fi + 蓝牙；CH340</p><p>物联网、无线通信和嵌入式入门</p></li>
+                        <li class="hardware-item" data-hardware-search="ESP32 模块 ESP32-WROOM-32UE Wi-Fi 蓝牙 产品原型 模块化开发"><h4>ESP32 模块</h4><p class="hardware-spec">ESP32-WROOM-32UE</p><p>Wi-Fi/蓝牙产品原型与模块化开发</p></li>
+                        <li class="hardware-item" data-hardware-search="Raspberry Pi Pico 2 RP2350A Type-C 微控制器 实时控制 嵌入式学习"><h4>Raspberry Pi Pico 2</h4><p class="hardware-spec">RP2350A Type-C</p><p>微控制器、实时控制和嵌入式学习</p></li>
+                        <li class="hardware-item" data-hardware-search="Arduino UNO R3 改进开发板 Arduino 传感器 执行器 实验"><h4>Arduino UNO R3</h4><p class="hardware-spec">UNO R3 改进开发板</p><p>Arduino 入门、传感器和执行器实验</p></li>
+                        <li class="hardware-item" data-hardware-search="Arduino Nano Nano V3.0 焊接版 小型 控制器 原型制作"><h4>Arduino Nano</h4><p class="hardware-spec">Nano V3.0 焊接版</p><p>小型 Arduino 控制器和原型制作</p></li>
+                        <li class="hardware-item" data-hardware-search="Arduino Pro Mini Pro Mini ATMega 低成本 小尺寸 嵌入式控制"><h4>Arduino Pro Mini</h4><p class="hardware-spec">Pro Mini ATMega</p><p>低成本、小尺寸嵌入式控制</p></li>
+                        <li class="hardware-item" data-hardware-search="STM32F030 开发板 STM32F030C8T6 最小系统 基础外设 编程"><h4>STM32F030 开发板</h4><p class="hardware-spec">STM32F030C8T6 最小系统</p><p>STM32 基础外设和嵌入式编程</p></li>
+                        <li class="hardware-item" data-hardware-search="STM32F103 开发板 STM32F103C8T6 64K 排针 外设 RTOS 项目"><h4>STM32F103 开发板</h4><p class="hardware-spec">STM32F103C8T6，64K，排针版</p><p>STM32 外设、RTOS 和项目开发</p></li>
+                        <li class="hardware-item" data-hardware-search="STM32F103 开发板 STM32F103C6T6 32K 未焊排针 外设 RTOS 项目"><h4>STM32F103 开发板</h4><p class="hardware-spec">STM32F103C6T6，32K，未焊排针版</p><p>STM32 外设、RTOS 和项目开发</p></li>
+                        <li class="hardware-item" data-hardware-search="STM8S003 开发板 STM8S003F3 8 位 单片机 控制"><h4>STM8S003 开发板</h4><p class="hardware-spec">STM8S003F3</p><p>低成本 8 位单片机学习与控制</p></li>
+                        <li class="hardware-item" data-hardware-search="BearPi-HM Nano Hi3861 OpenHarmony 鸿蒙 物联网 端侧开发"><h4>BearPi-HM Nano</h4><p class="hardware-spec">Hi3861；OpenHarmony</p><p>鸿蒙物联网与端侧开发学习</p></li>
+                        <li class="hardware-item" data-hardware-search="Orange Pi 5 Plus RK3588 16G 10.1 英寸屏 Linux 边缘计算 AI 多媒体"><h4>Orange Pi 5 Plus</h4><p class="hardware-spec">RK3588；16G 主板 + 10.1 英寸屏</p><p>Linux、边缘计算、AI 和多媒体开发</p></li>
+                        <li class="hardware-item" data-hardware-search="FPGA 开发板 野火征途 Mini Cyclone IV EP4CE10F17C8N 下载器 5 英寸屏 HDMI 数字逻辑"><h4>FPGA 开发板</h4><p class="hardware-spec">野火征途 Mini；Cyclone IV EP4CE10F17C8N；下载器 + 5 英寸屏</p><p>FPGA、HDMI 和数字逻辑学习</p></li>
+                        <li class="hardware-item" data-hardware-search="Air780EG 开发板 CAT1 GNSS GPS 天线 蜂窝通信 定位 物联网"><h4>Air780EG 开发板</h4><p class="hardware-spec">CAT1 + GNSS；GPS 天线</p><p>蜂窝通信、定位和物联网开发</p></li>
+                        <li class="hardware-item" data-hardware-search="ASR PRO 语音开发板 ASRPRO Type-C 喇叭 离线语音识别 语音交互"><h4>ASR PRO 语音开发板</h4><p class="hardware-spec">ASRPRO；Type-C 数据线 + 喇叭</p><p>离线语音识别和语音交互开发</p></li>
+                        <li class="hardware-item" data-hardware-search="树莓派 5 主板 显示配件 Linux GPIO 边缘计算"><h4>树莓派 5 主板</h4><p class="hardware-spec">树莓派 5 主板及显示配件</p><p>Linux、GPIO 和边缘计算学习</p></li>
+                    </ul>
+                </section>
+
+                <section class="hardware-category" data-hardware-category="机器人与运动控制">
+                    <div class="hardware-category-head"><span class="hardware-category-index">04</span><h3>机器人与运动控制</h3><span>05 项</span></div>
+                    <ul class="hardware-list">
+                        <li class="hardware-item" data-hardware-search="四轴机械臂 4 轴 4 自由度 舵机 Arduino Wi-Fi 机器人运动 控制程序"><h4>四轴机械臂</h4><p class="hardware-spec">4 轴 4 自由度；4 个舵机；Arduino/Wi-Fi 控制板</p><p>机器人运动、舵机和控制程序学习</p></li>
+                        <li class="hardware-item" data-hardware-search="FOC 控制板 双路无刷微型 FOC V3P ESP32 无刷电机 电流环 运动控制"><h4>FOC 控制板</h4><p class="hardware-spec">双路无刷微型 FOC V3P；含 ESP32</p><p>无刷电机、FOC 电流环和运动控制</p></li>
+                        <li class="hardware-item" data-hardware-search="STM32G474 电机控制板 正点原子 FOC PID 工控主板 电机控制 实验"><h4>STM32G474 电机控制板</h4><p class="hardware-spec">正点原子 STM32G474；FOC/PID 工控主板</p><p>电机控制、FOC 和 PID 实验</p></li>
+                        <li class="hardware-item" data-hardware-search="电机与驱动 N20 N30 直流无刷电机 驱动板 机构运动 自动化"><h4>电机与驱动</h4><p class="hardware-spec">N20、N30、直流无刷电机及驱动板</p><p>电机驱动、机构运动和自动化实验</p></li>
+                        <li class="hardware-item" data-hardware-search="舵机 MG90S SG90 9g 机械臂 云台 小型机构控制"><h4>舵机</h4><p class="hardware-spec">MG90S、SG90 9g 等</p><p>机械臂、云台和小型机构控制</p></li>
+                    </ul>
+                </section>
+
+                <section class="hardware-category" data-hardware-category="电子仪器">
+                    <div class="hardware-category-head"><span class="hardware-category-index">05</span><h3>电子仪器</h3><span>05 项</span></div>
+                    <ul class="hardware-list">
+                        <li class="hardware-item" data-hardware-search="数字示波器 DSO-TC3 高配 电路波形 信号 电源调试"><h4>数字示波器</h4><p class="hardware-spec">DSO-TC3 高配</p><p>电路波形、信号和电源调试</p></li>
+                        <li class="hardware-item" data-hardware-search="可编程直流电源 KD3005D 嵌入式 电路实验 供电"><h4>可编程直流电源</h4><p class="hardware-spec">KD3005D</p><p>嵌入式和电路实验供电</p></li>
+                        <li class="hardware-item" data-hardware-search="USB 逻辑分析仪 24M 采样 8 通道 串行总线 时序 数字信号"><h4>USB 逻辑分析仪</h4><p class="hardware-spec">24M 采样；8 通道</p><p>串行总线、时序和数字信号分析</p></li>
+                        <li class="hardware-item" data-hardware-search="ST-LINK 下载器 V20 国产主控 STM8 STM32 烧录 仿真 调试"><h4>ST-LINK 下载器</h4><p class="hardware-spec">V20 国产主控；支持 STM8/STM32</p><p>烧录、仿真和调试</p></li>
+                        <li class="hardware-item" data-hardware-search="测压计 型号未提供 电压 电源 基础测量"><h4>测压计</h4><p class="hardware-spec">型号未提供</p><p>电压和电源基础测量</p></li>
+                    </ul>
+                </section>
+
+                <section class="hardware-category" data-hardware-category="自媒体与影音设备">
+                    <div class="hardware-category-head"><span class="hardware-category-index">06</span><h3>自媒体与影音设备</h3><span>06 项</span></div>
+                    <ul class="hardware-list">
+                        <li class="hardware-item" data-hardware-search="相机 型号未提供 项目记录 拍摄 成品展示"><h4>相机</h4><p class="hardware-spec">型号未提供</p><p>项目记录、拍摄和成品展示</p></li>
+                        <li class="hardware-item" data-hardware-search="4K 摄像头 800 万像素 隐私盖 支架 视频会议 直播 课程 桌面拍摄"><h4>4K 摄像头</h4><p class="hardware-spec">800 万像素；隐私盖；自带支架</p><p>视频会议、直播、课程和桌面拍摄</p></li>
+                        <li class="hardware-item" data-hardware-search="无线领夹麦克风 Ulanzi A100 一拖二 采访 直播 Vlog 移动收音"><h4>无线领夹麦克风</h4><p class="hardware-spec">Ulanzi A100；一拖二</p><p>采访、直播、Vlog 和移动收音</p></li>
+                        <li class="hardware-item" data-hardware-search="无人机 电镀黑 智能悬浮 4K 航拍 空间 户外 项目拍摄"><h4>无人机</h4><p class="hardware-spec">电镀黑；智能悬浮；4K/航拍款</p><p>空间、户外和项目场景拍摄</p></li>
+                        <li class="hardware-item" data-hardware-search="无人机 避障款 飞行控制 辅助拍摄"><h4>无人机</h4><p class="hardware-spec">避障款</p><p>飞行控制练习和辅助拍摄</p></li>
+                        <li class="hardware-item" data-hardware-search="音频设备 DHE-6000 音箱 小米智能音箱 音频播放 语音交互 声音测试"><h4>音频设备</h4><p class="hardware-spec">DHE-6000 音箱；小米智能音箱</p><p>音频播放、语音交互和声音测试</p></li>
+                    </ul>
+                </section>
+            </div>
+            <p class="hardware-empty" data-hardware-empty hidden>没有匹配的设备，试试更短的关键词或切换分类。</p>
+            <p class="hardware-footnote">设备的当前状态、更多型号和后续补充，以飞书多维表格中的「使用清单」为准。</p>
+        </section>
+
         <section class="section library-section" id="library" data-section>
             <div class="section-heading">
                 <div>
-                    <p class="kicker">03 / SHELF & ROUTES</p>
+                    <p class="kicker">04 / SHELF & ROUTES</p>
                     <h2>书架与研究路线</h2>
                 </div>
                 <p class="section-note">阅读不是收藏数量，而是下一次动手前的准备。</p>

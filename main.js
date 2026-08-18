@@ -92,4 +92,65 @@
     });
 
     if (bookSearch) bookSearch.addEventListener('input', updateBookCatalog);
+
+    var hardwareFilterButtons = Array.from(document.querySelectorAll('[data-hardware-filter]'));
+    var hardwareSearch = document.querySelector('[data-hardware-search]');
+    var hardwareGrid = document.querySelector('[data-hardware-grid]');
+    var hardwareCategories = Array.from(document.querySelectorAll('[data-hardware-category]'));
+    var hardwareCount = document.querySelector('[data-hardware-visible-count]');
+    var hardwareEmpty = document.querySelector('[data-hardware-empty]');
+
+    if (hardwareGrid && hardwareCategories.length) {
+        var primaryColumn = document.createElement('div');
+        var secondaryColumn = document.createElement('div');
+        primaryColumn.className = 'hardware-column hardware-column-primary';
+        secondaryColumn.className = 'hardware-column hardware-column-secondary';
+
+        hardwareCategories.forEach(function (category) {
+            var primary = category.dataset.hardwareCategory === '嵌入式开发板' || category.dataset.hardwareCategory === '电子仪器';
+            (primary ? primaryColumn : secondaryColumn).appendChild(category);
+        });
+        hardwareGrid.append(primaryColumn, secondaryColumn);
+    }
+
+    function updateHardwareCatalog() {
+        var activeFilter = document.querySelector('[data-hardware-filter].is-active');
+        var filter = activeFilter ? activeFilter.dataset.hardwareFilter : 'all';
+        var query = hardwareSearch ? hardwareSearch.value.trim().toLocaleLowerCase() : '';
+        var visible = 0;
+        var visibleByColumn = { primary: 0, secondary: 0 };
+
+        hardwareCategories.forEach(function (category) {
+            var categoryMatches = filter === 'all' || category.dataset.hardwareCategory === filter;
+            var categoryVisible = 0;
+            category.querySelectorAll('.hardware-item').forEach(function (item) {
+                var matchesSearch = !query || item.dataset.hardwareSearch.toLocaleLowerCase().includes(query);
+                var isVisible = categoryMatches && matchesSearch;
+                item.classList.toggle('is-hidden', !isVisible);
+                if (isVisible) {
+                    categoryVisible += 1;
+                    visible += 1;
+                    visibleByColumn[category.parentElement.classList.contains('hardware-column-primary') ? 'primary' : 'secondary'] += 1;
+                }
+            });
+            category.classList.toggle('is-hidden', categoryVisible === 0);
+        });
+
+        if (hardwareGrid) hardwareGrid.classList.toggle('is-single-column', visibleByColumn.primary === 0 || visibleByColumn.secondary === 0);
+        if (hardwareCount) hardwareCount.textContent = visible;
+        if (hardwareEmpty) hardwareEmpty.hidden = visible > 0;
+    }
+
+    hardwareFilterButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            hardwareFilterButtons.forEach(function (item) {
+                var active = item === button;
+                item.classList.toggle('is-active', active);
+                item.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+            updateHardwareCatalog();
+        });
+    });
+
+    if (hardwareSearch) hardwareSearch.addEventListener('input', updateHardwareCatalog);
 })();
